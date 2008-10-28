@@ -1,40 +1,44 @@
-== DESCRIPTION:
+DESCRIPTION:
+============
 
 ORM-like utilities to interface with non-standard, hybrid REST / RPC type HTTP APIs
 
-== FEATURES/PROBLEMS:
+FEATURES/PROBLEMS:
+==================
 
 This project is in progress and not functional at all.
 
-== SYNOPSIS:
+SYNOPSIS:
+=========
 
-# Create a class
-#
-class User
-	include Strest::Client
+    # Create a class
+    #
+    class User
+	  include Strest::Client
 	
-	# define the host
-	site = 'https://api.cool-service.com'
+	  # define the host
+	  site = 'https://api.cool-service.com'
 	
-	# use this class to map the response back to Ruby objects
-	map_with SomeDataToUsersMapper
+	  # use this class to map the response back to Ruby objects
+	  map_with SomeDataToUsersMapper
 	
-	# define class methods mapped to HTTP verbs and custom URLs
-	#
-	get :all, '/weirdUsersPath/users'
+	  # define class methods mapped to HTTP verbs and custom URLs
+	  #
+	  get :all, '/weirdUsersPath/users'
 	
-	# define method with custom mapper
-	#
-	get :find, '/somePath/userExcerpts', :map_with => CustomResponseMapper
-end
+	  # define method with custom mapper
+	  #
+	  get :find, '/somePath/userExcerpts', :map_with => CustomResponseMapper
+    end
 
-# Use it
-#
-@users = User.all
+    # Use it
+    #
+    @users = User.all
 
-@user = User.find(3)
+    @user = User.find(3)
 
-== LICENSE:
+LICENSE:
+========
 
 (The MIT License)
 
