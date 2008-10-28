@@ -1,15 +1,15 @@
 DESCRIPTION:
-============
+-----------
 
 ORM-like utilities to interface with non-standard, hybrid REST / RPC type HTTP APIs
 
 FEATURES/PROBLEMS:
-==================
+------------------
 
 This project is in progress and not functional at all.
 
 SYNOPSIS:
-=========
+---------
 
     # Create a class
     #
@@ -38,7 +38,7 @@ SYNOPSIS:
     @user = User.find(3)
 
 LICENSE:
-========
+--------
 
 (The MIT License)
 
